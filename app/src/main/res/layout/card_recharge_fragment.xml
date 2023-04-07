@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_read_clear"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/iv_card_clear"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/card_send" />
+
+            <TextView
+                android:id="@+id/tv_card_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_card_clear"
+                android:text="清空"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_read_card"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/iv_card_read"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/card_send" />
+
+            <TextView
+                android:id="@+id/tv_card_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_card_read"
+                android:text="读卡"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_card_recharge"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick">
+
+            <ImageView
+                android:id="@+id/iv_card_send"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/card_send" />
+
+            <TextView
+                android:id="@+id/tv_card_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_card_send"
+                android:text="充值"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/gray_ecf0f5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="卡信息"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_card_number"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="卡号"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_card_state"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="卡状态"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_card_date"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="发卡日期"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_card_type"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="卡类型"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_card_balance"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="余额"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_card_free"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="卡费"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/et_card_number"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:gravity="center_vertical"
+            android:hint=""
+            android:paddingLeft="4dp"
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/et_card_state"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/et_card_number"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/et_card_date"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/et_card_state"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/et_card_type"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/et_card_date"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/et_card_date"
+            android:src="@drawable/aw_down" />
+
+        <TextView
+            android:id="@+id/et_card_balance"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/et_card_type"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/et_card_free"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/et_card_balance"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <!--持卡人信息-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="持卡人信息"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_user_idnumber"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="身份证号"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="姓名"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_user_phone"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="电话号"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_user_sex"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="性别"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_user_birthday"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="生日"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:focusable="false"
+            android:maxLength="18"
+            android:digits="0123456789X"
+            android:singleLine="true"
+            android:id="@+id/et_user_idnumber"
+            android:layout_width="250dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+        <EditText
+            android:focusable="false"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:id="@+id/et_user_name"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+        <EditText
+            android:focusable="false"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:id="@+id/et_user_phone"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="12sp" />
+
+        <FrameLayout
+            android:id="@+id/fl_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick">
+
+            <TextView
+                android:focusable="false"
+                android:background="@drawable/shape_gray__eeeeee2"
+                android:id="@+id/et_user_sex"
+                android:layout_width="120dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="4dp"
+                android:text=""
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_757575"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="106dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/aw_down" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/fl_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick">
+
+            <TextView
+                android:focusable="false"
+                android:id="@+id/et_user_birthday"
+                android:layout_width="120dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_gray__eeeeee2"
+                android:paddingLeft="4dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/gray_757575"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="106dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/aw_down" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_user_address"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="地址"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:focusable="false"
+            android:singleLine="true"
+            android:id="@+id/et_user_address"
+            android:layout_width="380dp"
+            android:layout_height="26dp"
+            android:layout_below="@id/tv_user_address"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_gray__eeeeee2"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_toRightOf="@id/tv_user_address"
+            android:id="@+id/tv_recharge_type"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="充值类型"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/tv_recharge_type"
+            android:id="@+id/fl_recharge_type"
+            android:layout_toRightOf="@id/et_user_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick">
+
+            <TextView
+                android:focusable="false"
+                android:background="@drawable/shape_white__eeeeee2"
+                android:id="@+id/et_recharge_type"
+                android:layout_width="120dp"
+                android:layout_height="26dp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="4dp"
+                android:text="现金"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray_757575"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="106dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/aw_down" />
+        </FrameLayout>
+        <TextView
+            android:layout_toRightOf="@id/fl_recharge_type"
+            android:id="@+id/tv_recharge_amount"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="充值金额"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:digits="0123456789"
+            android:layout_toRightOf="@id/fl_recharge_type"
+            android:singleLine="true"
+            android:id="@+id/et_recharge_amount"
+            android:layout_width="120dp"
+            android:layout_height="26dp"
+            android:layout_below="@id/tv_recharge_amount"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_white__eeeeee2"
+            android:paddingLeft="4dp"
+            android:text=""
+            android:textColor="@color/gray_757575"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

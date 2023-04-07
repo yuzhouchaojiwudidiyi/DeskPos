@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/rl_read_card"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/shap_selector_mian">
+
+            <ImageView
+                android:id="@+id/iv_card_read"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/card_send" />
+
+            <TextView
+                android:id="@+id/tv_card_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/iv_card_read"
+                android:text="读卡"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

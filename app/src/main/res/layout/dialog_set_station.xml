@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="430dp"
+        android:layout_height="360dp"
+        android:background="@drawable/shape_white_ffffff_2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="设置站点"
+            android:textColor="@color/black"
+            android:textSize="28sp" />
+
+
+        <EditText
+
+            android:id="@+id/et_station_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/shape_gray_b1b1b1_2"
+            android:gravity="center"
+            android:hint="请输入站点名"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_a0a0a0"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_station_id"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/shape_gray_b1b1b1_2"
+            android:gravity="center"
+            android:hint="请输入站点编号"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_a0a0a0"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_bind_station"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/shape_blue_1d6bff_2"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</FrameLayout>

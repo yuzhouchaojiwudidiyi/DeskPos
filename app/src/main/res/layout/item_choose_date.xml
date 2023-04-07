@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_gray__eeeeee2"
+    android:orientation="vertical">
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:startYear="1900"
+        android:endYear="2080"
+        android:calendarViewShown="true"
+        android:spinnersShown="true"/>
+
+    <TextView
+        android:layout_marginBottom="30dp"
+        android:id="@+id/tv_sure_choose_date"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_green_1d6bff_2"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/white" />
+
+
+
+
+</LinearLayout>

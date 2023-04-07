@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="wellsun人工售票系统"
+            android:textColor="#33cc99"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!--        <TextClock
+                    android:id="@+id/tv_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:format12Hour="yyyy-MM-dd\ hh:mm:ss"
+                    android:format24Hour="yyyy-MM-dd\ HH:mm:ss"
+                    android:textColor="#33cc99"
+                    android:textSize="18sp" />-->
+    </FrameLayout>
+
+    <View
+        android:id="@+id/v_top"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/fl_title"
+        android:layout_marginTop="4dp"
+        android:background="#33cc99" />
+
+    <RelativeLayout
+        android:id="@+id/rl_module"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fl_title"
+        android:layout_marginTop="6dp"
+        android:background="@color/gray_ecf0f5">
+
+
+        <LinearLayout
+            android:id="@+id/ll_card_send"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/card_send" />
+
+            <TextView
+                android:id="@+id/tv_card_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="发卡"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_card_recharge"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/ll_card_send"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/card_recharge" />
+
+            <TextView
+                android:id="@+id/tv_card_recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="充值"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_card_recharge_cancle"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/ll_card_send"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/card_recharge_cancle" />
+
+            <TextView
+                android:id="@+id/tv_card_recharge_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="冲正"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_card_detail"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/ll_card_recharge"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/ll_card_recharge_cancle"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/card_detail" />
+
+            <TextView
+                android:id="@+id/tv_card_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="卡信息"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_card_qr"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/ll_card_recharge_cancle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/card_detail" />
+
+            <TextView
+                android:id="@+id/tv_card_qr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="二维码"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_card_lock"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/ll_card_detail"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/ll_card_qr"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/card_lock" />
+
+            <TextView
+                android:id="@+id/tv_card_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="解锁卡"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_card_change"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/ll_card_qr"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/card_change" />
+
+            <TextView
+                android:id="@+id/tv_card_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="换卡"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_card_psam"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/ll_card_change"
+            android:layout_below="@id/ll_card_lock"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shap_selector_mian"
+            android:onClick="onClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/card_change" />
+
+            <TextView
+                android:id="@+id/tv_card_psam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:text="PSAM"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v_left"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_toRightOf="@id/ll_card_recharge"
+            android:background="#33cc99" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/v_top"
+        android:layout_toRightOf="@id/rl_module" />
+
+
+</RelativeLayout>
